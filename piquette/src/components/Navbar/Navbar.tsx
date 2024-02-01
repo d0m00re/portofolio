@@ -8,25 +8,23 @@ import { Github } from 'lucide-react';
 import { Youtube } from 'lucide-react';
 import { navigate } from '../Project/action';
 
-type Props = {}
-
 type TLinkArrElem = {
-    key: string;
+    id: string;
     name: string;
     link : string;
 }
 
 const linkArr: TLinkArrElem[] = [
     {
-        key: "e_home",
+        id: "e_home",
         name: "Home",
         link : "/"
     }, {
-        key: "e_skill",
+        id: "e_skill",
         name: "Skill",
         link : "/"
     }, {
-        key: "e_projects",
+        id: "e_projects",
         name: "Projects",
         link : "/"
     }
@@ -39,7 +37,7 @@ function NavbarElem(props: TLinkArrElem) {
 }
 
 type TLinkSocialNetwork = {
-    key: string;
+    id: string;
     social: "linkedin" | "facebook" | "youtube" | "medium" | "github";
     name: string;
     icon: LucideIcon;
@@ -48,19 +46,19 @@ type TLinkSocialNetwork = {
 
 const linkSocialArr: TLinkSocialNetwork[] = [
     {
-        key: "linkedin",
+        id: "linkedin",
         social: "linkedin",
         name: "linke",
         link: "https://linkedin.com",
         icon: Linkedin
     }, {
-        key: "youtube",
+        id: "youtube",
         social: "youtube",
         name: "youtube",
         link: "https://youtube.com",
         icon: Youtube
     }, {
-        key: "github",
+        id: "github",
         social: "github",
         name: "github",
         link: "https://github.com",
@@ -76,7 +74,7 @@ function NavbarSocialElem(props: TLinkSocialNetwork) {
     )
 }
 
-function Navbar({ }: Props) {
+function Navbar() {
     return (
         <header className='flex flex-row justify-between p-2 items-center'>
             <p className="text-green-800 text-2xl">PICKLE</p>
@@ -84,6 +82,7 @@ function Navbar({ }: Props) {
                 {
                     linkArr.map(elem =>
                         <NavbarElem
+                            key={elem.id}
                             {...elem}
                         />)
                 }
@@ -91,7 +90,7 @@ function Navbar({ }: Props) {
 
             <ul className='flex flex-row gap-3'>
                 {
-                    linkSocialArr.map(elem => <NavbarSocialElem {...elem} />)
+                    linkSocialArr.map(elem => <NavbarSocialElem key={elem.id} {...elem} />)
                 }
             </ul>
 

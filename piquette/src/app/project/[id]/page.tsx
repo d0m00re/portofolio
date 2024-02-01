@@ -11,7 +11,7 @@ const getProject = (id: string) => {
   return projectJSON.find(e => e.id === id);
 }
 
-function page({ }: Props) {
+function Page({ }: Props) {
   const params = useParams<{ id: string }>();
   const currentProject = getProject(params.id);
 
@@ -36,4 +36,4 @@ function page({ }: Props) {
   )
 }
 
-export default page
+export default Page

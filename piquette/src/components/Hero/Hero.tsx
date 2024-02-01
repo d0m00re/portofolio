@@ -18,7 +18,7 @@ function Hero({ }: Props) {
                 <h1 className="text-4xl">{data.title}</h1>
                 <p>{data.desc}</p>
                 <div className='flex flex-row gap-1 flex-wrap'>{
-                    data.techno.map(elem => <Badge>#{elem}</Badge>)
+                    data.techno.map(elem => <Badge key={elem}>#{elem}</Badge>)
                 }</div>
             </div>
             <div className='flex flex-col w-full sm:w-1/2 items-center'>

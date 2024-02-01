@@ -18,11 +18,9 @@ type TContactForm = z.infer<typeof ValidateContactForm>;
 
 // -------------------------------------
 
-type Props = {}
-
 const commonCss = "w-full max-w-sm";
 
-function page({ }: Props) {
+function Page() {
     const { register, handleSubmit } = useForm<TContactForm>({
         resolver: zodResolver(ValidateContactForm)
     });
@@ -55,4 +53,4 @@ function page({ }: Props) {
     )
 }
 
-export default page
+export default Page;
