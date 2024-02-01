@@ -25,13 +25,13 @@ function NavbarMobile() {
     const toggleOpen = () => setIsOpen((prev) => !prev)
 
     return (<header className='flex justify-between sm:hidden p-5'>
-        <p className="text-green-800 text-2xl">PICKLE</p>
+        <p className="text-black-500 hover:text-black-300 text-2xl">PICKLE</p>
         <Menu
             onClick={toggleOpen}
-            className='relative z-50 h-8 w-8 text-zinc-700 cursor-pointer'
+            className='relative z-50 h-8 w-8 text-black cursor-pointer'
         />
         {isOpen ?
-            <div className='fixed p-4 gap-4 flex flex-col items-center animate-in slide-in-from-top-5 fade-in-20 inset-0 z-0 w-full h-full bg-slate-50 pt-16'>
+            <div className='fixed p-4 gap-4 flex flex-col items-center animate-in slide-in-from-top-5 fade-in-20 inset-0 z-0 w-full h-full bg-slate-50  pt-16'>
                 <ul className='flex flex-row gap-3'>
                     {
                         linkArr.map(elem =>

@@ -20,8 +20,8 @@ const linkSocialArr: TLinkSocialNetworkElem[] = navbarData.socialLink as TLinkSo
 
 function NavbarNormal() {
     return (
-        <header className='hidden sm:flex flex-row justify-between p-2 items-center'>
-            <p className="text-green-800 text-2xl cursor-pointer" onClick={() => navigate("/")}>PICKLE</p>
+        <header className='hidden sm:flex flex-row justify-between pt-2 items-center pl-24 pr-24'>
+            <p className="text-black text-2xl cursor-pointer" onClick={() => navigate("/")}>PICKLE</p>
             {/*
             <ul className='flex flex-row gap-3'>
                 {
