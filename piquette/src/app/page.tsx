@@ -1,4 +1,3 @@
-import Contact from "@/components/Contact/Contact";
 import Experience from "@/components/Experience/Experience";
 import Hero from "@/components/Hero/Hero";
 import Project from "@/components/Project/Project";
@@ -11,7 +10,6 @@ export default function Home() {
       <Skill />
       <Project />
       <Experience />
-      <Contact />
     </main>
   );
 }

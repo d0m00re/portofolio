@@ -1,32 +1,39 @@
+"use client"
+
 import React from 'react'
 import { Button } from '../ui/button';
 
 import { Instagram, Linkedin, LucideIcon } from 'lucide-react';
 import { Github } from 'lucide-react';
 import { Youtube } from 'lucide-react';
+import { navigate } from '../Project/action';
 
 type Props = {}
 
 type TLinkArrElem = {
     key: string;
     name: string;
+    link : string;
 }
 
 const linkArr: TLinkArrElem[] = [
     {
         key: "e_home",
-        name: "Home"
+        name: "Home",
+        link : "/"
     }, {
         key: "e_skill",
-        name: "Skill"
+        name: "Skill",
+        link : "/"
     }, {
         key: "e_projects",
-        name: "Projects"
+        name: "Projects",
+        link : "/"
     }
 ];
 
 function NavbarElem(props: TLinkArrElem) {
-    return (<li className='cursor-pointer'>
+    return (<li className='cursor-pointer' onClick={() => navigate(props.link)}>
         {props.name}
     </li>)
 }
@@ -63,7 +70,7 @@ const linkSocialArr: TLinkSocialNetwork[] = [
 
 function NavbarSocialElem(props: TLinkSocialNetwork) {
     return (
-        <div className="bg-blue-500 hover:bg-blue-300 rounded-full p-3 border-2 border-black cursor-pointer ease-in duration-100">
+        <div className="bg-green-500 hover:bg-green-300 rounded-full p-3 border-2 border-black cursor-pointer ease-in duration-100">
             <props.icon className='w-4 h-4' />
         </div>
     )
@@ -72,7 +79,7 @@ function NavbarSocialElem(props: TLinkSocialNetwork) {
 function Navbar({ }: Props) {
     return (
         <header className='flex flex-row justify-between p-2 items-center'>
-            <p>LOGO</p>
+            <p className="text-green-800 text-2xl">PICKLE</p>
             <ul className='flex flex-row gap-3'>
                 {
                     linkArr.map(elem =>
@@ -88,7 +95,7 @@ function Navbar({ }: Props) {
                 }
             </ul>
 
-            <Button variant="outline" className='text-lg'>Let s connect</Button>
+            <Button onClick={() => navigate("/contact")} variant="outline" className='text-lg'>Let s connect</Button>
 
         </header>
     )
