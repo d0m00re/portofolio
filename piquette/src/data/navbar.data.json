@@ -1,0 +1,35 @@
+{
+    "internalLink" : [
+        {
+            "id": "e_home",
+            "name": "Home",
+            "link" : "/"
+        }, {
+            "id": "e_skill",
+            "name": "Skill",
+            "link" : "/"
+        }, {
+            "id": "e_projects",
+            "name": "Projects",
+            "link" : "/"
+        }
+    ],
+    "socialLink" :  [
+        {
+            "id": "linkedin",
+            "social": "linkedin",
+            "name": "linke",
+            "link": "https://linkedin.com"
+        }, {
+            "id": "youtube",
+            "social": "youtube",
+            "name": "youtube",
+            "link": "https://youtube.com"
+        }, {
+            "id": "github",
+            "social": "github",
+            "name": "github",
+            "link": "https://github.com"
+        }
+    ]
+}

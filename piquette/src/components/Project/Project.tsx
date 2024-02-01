@@ -4,16 +4,13 @@ import React from 'react';
 import Image from 'next/image'
 import projectJSON from "@/data/project.data.json";
 import { redirect } from 'next/navigation';
-import { navigate } from './action';
+import { navigate } from '@/libNextjs/action';
 
 const projects : IProjectElem[] = projectJSON;
 
 function ProjectElem(props: IProjectElem) {
     return <div
         onClick={() => {
-            console.log(props)
-
-            console.log(`redirect on : /project/${props.id}`)
             navigate(`/project/${props.id}`);
         }}
         className='w-full p-4 border-2 rounded-sm cursor-pointer'>
