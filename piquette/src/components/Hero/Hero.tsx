@@ -5,7 +5,7 @@ import heroData from "@/data/hero.data.json";
 
 function Hero() {
     return (
-        <div className="flex flex-col-reverse sm:flex-row gap-2 w-full sm:max-w-2xl items-center">
+        <section className="flex flex-col-reverse sm:flex-row gap-2 w-full items-center">
             <div className='flex flex-col w-full sm:w-1/2 gap-2'>
                 <h1 className="text-4xl">{heroData.title}</h1>
                 <p>{heroData.desc}</p>
@@ -22,7 +22,7 @@ function Hero() {
                     className='rounded-full'
                 />
             </div>
-        </div>
+        </section>
     )
 }
 
