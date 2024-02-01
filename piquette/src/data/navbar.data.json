@@ -4,14 +4,6 @@
             "id": "e_home",
             "name": "Home",
             "link" : "/"
-        }, {
-            "id": "e_skill",
-            "name": "Skill",
-            "link" : "/"
-        }, {
-            "id": "e_projects",
-            "name": "Projects",
-            "link" : "/"
         }
     ],
     "socialLink" :  [
