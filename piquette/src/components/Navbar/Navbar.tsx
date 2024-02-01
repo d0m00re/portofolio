@@ -68,7 +68,7 @@ const linkSocialArr: TLinkSocialNetwork[] = [
 
 function NavbarSocialElem(props: TLinkSocialNetwork) {
     return (
-        <div className="bg-green-500 hover:bg-green-300 rounded-full p-3 border-2 border-black cursor-pointer ease-in duration-100">
+        <div onClick={() => navigate(props.link)} className="bg-green-500 hover:bg-green-300 rounded-full p-3 border-2 border-black cursor-pointer ease-in duration-100">
             <props.icon className='w-4 h-4' />
         </div>
     )

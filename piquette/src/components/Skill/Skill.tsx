@@ -4,7 +4,7 @@ type Props = {}
 
 function Skill({}: Props) {
   return (
-    <div>Skill</div>
+    <div></div>
   )
 }
 
