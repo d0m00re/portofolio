@@ -1,17 +1,15 @@
 "use client"
 
 import React from 'react'
-import { usePathname, useParams, useSearchParams } from 'next/navigation'
+import { useParams } from 'next/navigation'
 import projectJSON from "@/data/project.data.json";
 import Image from 'next/image';
-
-type Props = {}
 
 const getProject = (id: string) => {
   return projectJSON.find(e => e.id === id);
 }
 
-function Page({ }: Props) {
+function Page() {
   const params = useParams<{ id: string }>();
   const currentProject = getProject(params.id);
 
