@@ -8,6 +8,7 @@ import NavbarElem from './components/NavbarElem';
 import NavbarSocialElem, { ESocialNetwork, TLinkSocialNetworkElem } from './components/NavbarSocialNetworkElem';
 import { ArrowRight, Menu } from 'lucide-react'
 import { Separator } from "@/components/ui/separator"
+import LogoText from './components/LogoText';
 
 type TLinkArrElem = {
     id: string;
@@ -24,8 +25,8 @@ function NavbarMobile() {
     const [isOpen, setIsOpen] = useState<boolean>(false);
     const toggleOpen = () => setIsOpen((prev) => !prev)
 
-    return (<header className='flex justify-between sm:hidden p-5'>
-        <p className="text-black-500 hover:text-black-300 text-2xl">PICKLE</p>
+    return (<header className='flex justify-between sm:hidden p-5  sticky inset-x-0 top-0 z-40 bg-gradient-to-r from-emerald-500 to-emerald-900'>
+        <LogoText />
         <Menu
             onClick={toggleOpen}
             className='relative z-50 h-8 w-8 text-black cursor-pointer'
