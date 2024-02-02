@@ -38,7 +38,7 @@ function NavbarNormal() {
                     linkSocialArr.map(elem => <NavbarSocialElem key={elem.id} {...elem} />)
                 }
             </ul>
-            <Button onClick={() => navigate("/contact")} variant="outline" className='text-lg'>Let's connect</Button>
+            <Button onClick={() => navigate("/contact")} variant="outline" className='text-lg'>Let&apos;s connect</Button>
         </header>
     )
 }

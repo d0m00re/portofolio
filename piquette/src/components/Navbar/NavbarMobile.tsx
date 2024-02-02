@@ -52,7 +52,7 @@ function NavbarMobile() {
 
                 <Separator orientation="horizontal" />
 
-                <Button onClick={() => {navigate("/contact"); setIsOpen(false)}} variant="outline" className='text-lg'>Let's connect</Button>
+                <Button onClick={() => {navigate("/contact"); setIsOpen(false)}} variant="outline" className='text-lg'>Let&apos;s connect</Button>
 
             </div>
             : <></>
