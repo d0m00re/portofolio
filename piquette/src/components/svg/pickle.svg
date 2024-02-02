@@ -1,0 +1,16 @@
+<svg width="200" height="400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="pickleGradient" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" style="stop-color:#4C9A2A;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#38761D;stop-opacity:1" />
+    </radialGradient>
+  </defs>
+  <g>
+    <path d="M50,100 Q25,200 50,300 Q75,400 100,300 Q125,200 100,100 Q75,0 50,100" fill="url(#pickleGradient)"/>
+    <circle cx="75" cy="150" r="10" fill="#6AA84F" />
+    <circle cx="125" cy="250" r="10" fill="#6AA84F" />
+    <circle cx="75" cy="350" r="8" fill="#6AA84F" />
+    <circle cx="50" cy="250" r="5" fill="#6AA84F" />
+    <circle cx="100" cy="200" r="6" fill="#6AA84F" />
+  </g>
+</svg>

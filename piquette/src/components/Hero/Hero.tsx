@@ -5,7 +5,7 @@ import heroData from "@/data/hero.data.json";
 
 function Hero() {
     return (
-        <section className="flex flex-col-reverse sm:flex-row gap-2 w-full items-center">
+        <section className="flex flex-col-reverse sm:flex-row gap-2 w-full items-center sticky inset-x-0 top-10">
             <div className='flex flex-col w-full sm:w-1/2 gap-2'>
                 <h1 className="text-4xl">{heroData.title}</h1>
                 <p>{heroData.desc}</p>
