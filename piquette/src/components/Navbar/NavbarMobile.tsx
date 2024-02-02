@@ -9,6 +9,7 @@ import NavbarSocialElem, { ESocialNetwork, TLinkSocialNetworkElem } from './comp
 import { ArrowRight, Menu } from 'lucide-react'
 import { Separator } from "@/components/ui/separator"
 import LogoText from './components/LogoText';
+import { Mail } from "lucide-react";
 
 type TLinkArrElem = {
     id: string;
@@ -53,38 +54,19 @@ function NavbarMobile() {
 
                 <Separator orientation="horizontal" />
 
-                <Button onClick={() => {navigate("/contact"); setIsOpen(false)}} variant="outline" className='text-lg'>Let&apos;s connect</Button>
+                <Button
+                    onClick={() => {navigate("/contact");
+                    setIsOpen(false)}}
+                    variant="outline"
+                    className='text-lg'>
+                        <Mail className="mr-2 h-4 w-4" />
+                        Let&apos;s connect
+                </Button>
 
             </div>
             : <></>
         }
     </header>)
 }
-
-/*
-function Navbar() {
-    return (
-        <header className='flex flex-row justify-between p-2 items-center'>
-            <p className="text-green-800 text-2xl">PICKLE</p>
-            <ul className='flex flex-row gap-3'>
-                {
-                    linkArr.map(elem =>
-                        <NavbarElem
-                            key={elem.id}
-                            {...elem}
-                        />)
-                }
-            </ul>
-
-            <ul className='flex flex-row gap-3'>
-                {
-                    linkSocialArr.map(elem => <NavbarSocialElem key={elem.id} {...elem} />)
-                }
-            </ul>
-            <Button onClick={() => navigate("/contact")} variant="outline" className='text-lg'>Let s connect</Button>
-        </header>
-    )
-}
-*/
 
 export default NavbarMobile;

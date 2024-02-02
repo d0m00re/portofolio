@@ -5,16 +5,19 @@ import { Button } from '../ui/button';
 import { navigate } from '@/libNextjs/action';
 import navbarData from "@/data/navbar.data.json";
 import NavbarElem from './components/NavbarElem';
-import NavbarSocialElem, { ESocialNetwork, TLinkSocialNetworkElem } from './components/NavbarSocialNetworkElem';
+import NavbarSocialElem, { TLinkSocialNetworkElem } from './components/NavbarSocialNetworkElem';
 import LogoText from './components/LogoText';
+import { Mail } from "lucide-react";
 
+
+/*
 type TLinkArrElem = {
     id: string;
     name: string;
     link: string;
 }
-
-const linkArr: TLinkArrElem[] = navbarData.internalLink;
+*/
+//const linkArr: TLinkArrElem[] = navbarData.internalLink;
 
 // todo : add zod validator
 const linkSocialArr: TLinkSocialNetworkElem[] = navbarData.socialLink as TLinkSocialNetworkElem[];
@@ -39,7 +42,10 @@ function NavbarNormal() {
                     linkSocialArr.map(elem => <NavbarSocialElem key={elem.id} {...elem} />)
                 }
             </ul>
-            <Button onClick={() => navigate("/contact")} variant="outline" className='text-lg'>Let&apos;s connect</Button>
+            <Button onClick={() => navigate("/contact")} variant="outline" className='text-lg'>
+                <Mail className="mr-2 h-4 w-4" />
+                Let&apos;s connect
+            </Button>
         </header>
     )
 }

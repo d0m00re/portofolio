@@ -16,8 +16,8 @@ function ProjectElem(props: IProjectElem) {
         className='w-full p-4 border-2 rounded-sm cursor-pointer'>
         <Image
             src={props.picture}
-            width={500}
-            height={300}
+            width={400}
+            height={400}
             alt="Background Image"
             className='rounded-sm'
         />
